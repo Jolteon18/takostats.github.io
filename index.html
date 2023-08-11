@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+            // Función para obtener parámetros de la URL
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            var sessionId = getQueryParam("sessionId");  // Obtiene el sessionId desde la URL
+
+            var stripe = Stripe('pk_live_51NdoWCEr4LdXKH8X3nU4AeeDgCHJjeaUIqYXl3LAKnzJEWFWpIhUFrNP439evs2HPLNizZcu1qqubzrAhIOArR5C00kAvILKBd');
+            stripe.redirectToCheckout({ sessionId: sessionId });
+        </script>
+    </body>
+</html>
