@@ -10,7 +10,7 @@
 
             var sessionId = getQueryParam("sessionId");  // Obtiene el sessionId desde la URL
 
-            var stripe = Stripe('pk_live_51NdoWCEr4LdXKH8X3nU4AeeDgCHJjeaUIqYXl3LAKnzJEWFWpIhUFrNP439evs2HPLNizZcu1qqubzrAhIOArR5C00kAvILKBd');
+            var stripe = Stripe('pk_test_51NdoWCEr4LdXKH8XM9JjkQL7llq0odOpXKFZCyDmIHTrkRQ0yxH7OiLmpdEa4gz0Ra0ZvfyWxTAhxudeokwSjv6e00c0GxyJSn');
             stripe.redirectToCheckout({ sessionId: sessionId });
         </script>
     </body>
